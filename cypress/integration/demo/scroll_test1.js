@@ -1,0 +1,32 @@
+describe('web滚动窗口案例',function(){
+    beforeEach(()=>{
+        cy.visit('https://www.cnblogs.com/yoyoketang/')
+    })
+    it("上下拖动",()=>{
+        //滚动到窗口底部
+        cy.scrollTo('bottom')
+        cy.wait(3000)
+        //左下角
+        cy.scrollTo('bottomLeft')
+        cy.wait(3000)
+        //回到顶部
+        cy.scrollTo('top')
+        //X横向，距离左侧100像素，可以是数字100
+        cy.scrollTo('100')
+        cy.wait(3000)
+        //x横向，距离左侧150像素
+        cy.scrollTo('150')
+        cy.wait(3000)
+        cy.scrollTo('200px')
+        //按百分比，滚动50%
+        cy.wait(3000)
+        cy.scrollTo('50%')
+        //y纵向上下滚动，往下滚动100像素
+        cy.scrollTo(0,100)
+        cy.wait(3000)
+        cy.scrollTo('0','200')
+        //滚动到中间位置
+        cy.wait(3000)
+        cy.scrollTo('0','50%')
+    })
+})
