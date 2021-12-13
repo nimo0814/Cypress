@@ -6,6 +6,10 @@
 		"html": false,
 		"json": true
 	},
-	"baseUrl": "https://helloqa.com",
+	"baseUrl": "http://localhost:7077",
+	"env": {
+		"foor": "bar",
+		"key": "value"
+	},
 	"defaultCommandTimeout": 30000
 }
